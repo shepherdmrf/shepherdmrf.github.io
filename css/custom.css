@@ -43,6 +43,3 @@
     box-shadow: var(--june-shadow-border);
 }
 
-#twikoo .tk-input-email {
-  display: none !important;
-}
