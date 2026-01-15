@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>如何使用github</title>
+      <link href="/2026/01/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github/"/>
+      <url>/2026/01/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何使用github"><a href="#如何使用github" class="headerlink" title="如何使用github"></a>如何使用github</h1><h2 id="1-下载VSCode"><a href="#1-下载VSCode" class="headerlink" title="1. 下载VSCode"></a>1. 下载VSCode</h2><pre><code>网上配置教程非常多，随便找一个应该都可以成功。我找了一个看着还行的教程：https://blog.csdn.net/msdcp/article/details/127033151也可以自己找教程，反正能安装成功就行。</code></pre><h2 id="2-在VSCode上配置Latex"><a href="#2-在VSCode上配置Latex" class="headerlink" title="2. 在VSCode上配置Latex"></a>2. 在VSCode上配置Latex</h2><pre><code>我当时用的教程是下面这个，个人觉得非常不错，大家可以参考。https://zhuanlan.zhihu.com/p/166523064Mac用户参照这个吧，https://zhuanlan.zhihu.com/p/654720622 。我没实践过，但应该没什么问题。</code></pre><h2 id="3-如何使用Git-Github"><a href="#3-如何使用Git-Github" class="headerlink" title="3. 如何使用Git &amp; Github"></a>3. 如何使用Git &amp; Github</h2><h3 id="1-下载-安装-Git"><a href="#1-下载-安装-Git" class="headerlink" title="1. 下载 &amp; 安装 Git"></a>1. 下载 &amp; 安装 Git</h3><pre><code>首先从官网根据自己的电脑型号下载并安装 https://git-scm.com/download在终端输入以下命令检查 git 版本: git -v</code></pre><h3 id="2-配置Git"><a href="#2-配置Git" class="headerlink" title="2. 配置Git"></a>2. 配置Git</h3><pre><code>参考我一个学长写的文档，务必按照要求操作https://github.com/1051727403/SHU-CS-Source-Share/wiki/How-to-Use-Git-&amp;-GitHub</code></pre><h2 id="4-如何使用Git辅助我们协作写作（git基本语言讲解）"><a href="#4-如何使用Git辅助我们协作写作（git基本语言讲解）" class="headerlink" title="4. 如何使用Git辅助我们协作写作（git基本语言讲解）"></a>4. 如何使用Git辅助我们协作写作（git基本语言讲解）</h2><h3 id="1-将本地项目直接连接至远程储存库"><a href="#1-将本地项目直接连接至远程储存库" class="headerlink" title="1. 将本地项目直接连接至远程储存库"></a>1. 将本地项目直接连接至远程储存库</h3><pre><code>git remote add origin &lt;sshAddress&gt;将&lt;sshAddress&gt;改为远程仓库的地址</code></pre><h3 id="2-从远程存储库中的main分支拉取原始项目"><a href="#2-从远程存储库中的main分支拉取原始项目" class="headerlink" title="2. 从远程存储库中的main分支拉取原始项目"></a>2. 从远程存储库中的main分支拉取原始项目</h3><pre><code>git pull origin main</code></pre><h3 id="3-查看本地分支"><a href="#3-查看本地分支" class="headerlink" title="3. 查看本地分支"></a>3. 查看本地分支</h3><pre><code>git branch</code></pre><h3 id="4-切换到某个分支"><a href="#4-切换到某个分支" class="headerlink" title="4. 切换到某个分支"></a>4. 切换到某个分支</h3><pre><code>git switch &lt;分支名&gt;一般分支名取名git switch -c feature/omp-#5 --track origin/feature/omp-#5</code></pre><h3 id="5-从远程存储库同步变化"><a href="#5-从远程存储库同步变化" class="headerlink" title="5. 从远程存储库同步变化"></a>5. 从远程存储库同步变化</h3><pre><code>git pull --no-rebase</code></pre><h3 id="6-创建本地分支"><a href="#6-创建本地分支" class="headerlink" title="6. 创建本地分支"></a>6. 创建本地分支</h3><pre><code>git switch -c &lt;分支名&gt;</code></pre><h3 id="7-将本地分支推送到远程存储库"><a href="#7-将本地分支推送到远程存储库" class="headerlink" title="7. 将本地分支推送到远程存储库"></a>7. 将本地分支推送到远程存储库</h3><pre><code>git push -u origin &lt;分支名&gt;:&lt;分支名&gt;</code></pre><h3 id="8-上传本地分支内容到远程存储库自己的分支的流程"><a href="#8-上传本地分支内容到远程存储库自己的分支的流程" class="headerlink" title="8. 上传本地分支内容到远程存储库自己的分支的流程"></a>8. 上传本地分支内容到远程存储库自己的分支的流程</h3><pre><code>切换到自己的分支git checkout &lt;分支名&gt;git add .git commit与远程存储库自己的分支同步git pull --no-rebase上传到远程存储库自己的分支git push origin &lt;分支名&gt;💡Note:所有你的改动都必须是在自己的分支上进行。不要直接对main分支做任何改动。</code></pre><h3 id="9-合并分支"><a href="#9-合并分支" class="headerlink" title="9. 合并分支"></a>9. 合并分支</h3><pre><code>假如你想要把自己的改动并入main分支，请提交一个pull request，等待其他成员审核通过后，再合并。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 神秘小屋杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>鸿门宴解读（补档）</title>
       <link href="/2026/01/15/%E9%B8%BF%E9%97%A8%E5%AE%B4%E8%A7%A3%E8%AF%BB%EF%BC%88%E8%A1%A5%E6%A1%A3%EF%BC%89/"/>
       <url>/2026/01/15/%E9%B8%BF%E9%97%A8%E5%AE%B4%E8%A7%A3%E8%AF%BB%EF%BC%88%E8%A1%A5%E6%A1%A3%EF%BC%89/</url>
