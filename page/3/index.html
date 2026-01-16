@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Shepherd的神秘小屋 - 珍惜眼前人</title><meta name="author" content="Shepherd"><meta name="copyright" content="Shepherd"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="生活不可能像你想象的那么好，但也不会像你想象的那么遭">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shepherd的神秘小屋">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="Shepherd的神秘小屋">
+<meta property="og:description" content="生活不可能像你想象的那么好，但也不会像你想象的那么遭">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/shepherd.jpg">
+<meta property="article:author" content="Shepherd">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/shepherd.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4-b1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Shepherd的神秘小屋',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/shepherd.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/index.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Shepherd的神秘小屋</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Shepherd的神秘小屋</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-09/" title="Hello! How are you?_09">Hello! How are you?_09</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:47:23.000Z" title="发表于 2026-01-11 20:47:23">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">09. 神明厌弃我“Jay，你好可爱！我可以和你拍张照吗？” “我好喜欢你，Jay，你的笑容太甜了！” 名誉 “Jay，昨晚你在活动上的走秀真的太惊艳了，亲爱的！我还举着灯牌为你加油呢。我很快会寄一套新衣服给你挑选。如果你在下次活动上穿我们家的牌子，这个系列肯定会大火的！” “Jay小姐，这是 YMCA 送来的化妆品。他们说你可以去店里任选任何东西——全部免费。” 礼物 “Jay，今天又有三束花送到你这儿。我在想是哪位富豪送的。” 爱慕 “请帮演员补个妆吧，她上镜不好看，这电影也卖不出去。” “Jay也拿条毛巾吧，不然明天拍戏感冒了可就麻烦了。” 关怀 “太惊艳了！你简直完美无瑕。Jay Jeerapat，无论你做什么、走到哪里，永远都闪闪发光。” 奉承 “Jay来了！那边快点——我们能做个简短采访吗？之前传的新闻是真的吗？” “你真的和传闻中的那个人在交往吗？” “就是她！Jay Jeerapat！本人比照片更惊艳！” 关注 曾经我还红火的时候，我总是被这样的人、这样的话包围着。 但这一切从来都不是免费的。每一个笑容，每一次体贴背后，总有他们想要的东西。 从来没有这么孤独过——...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-08/" title="Hello! How are you?_08">Hello! How are you?_08</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:47:19.000Z" title="发表于 2026-01-11 20:47:19">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">08. Line每天都在耍我“越是恨你，越是爱你。” 但我真正想说的是： “你往往会得到你最讨厌的东西。” 这是我从小听到大的一句泰国俗语——直到现在，我才真正懂得其中含义。 我越想避开你，命运就越要把你拽到我面前。我越不想看到你，你偏偏就出现在我面前……就那么理直气壮。 她调戏着另一个女孩。 “要不要把 Jay 一起叫过来？”  她一边说，一边勾唇坏笑，像是永远都比别人快半拍。  那双带着甜意的眼睛闪着狡黠的光芒，她挑了挑眉。 “你到底在打什么主意，P’Ploy？” “我只是觉得，我们三个人待在一起的时候——” 她随意地说着，正把她那一头长长的卷发束成髻，几缕柔顺的发丝贴在她白皙的脖颈边，慵懒地垂着。 “就是有种……特别合拍的感觉，挺让人享受的。” 她凑过去，贴在另一个女孩耳边低语，两人靠得极近，肩贴着肩站在泳池里。她说了什么，我听不清。 我躺在泳池边的躺椅上，假装在看小说，实际上却借着书的掩护偷看她们。 我几乎气得耳朵冒烟，像开水壶一样快要炸开——P’Ploy 跟 Prang 调情，这让我怒火中烧。 可当 Prang 一脸不耐烦地把她推开，我却感到一丝快意。 “这事永远不会发...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-07/" title="Hello! How are you?_07">Hello! How are you?_07</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:47:14.000Z" title="发表于 2026-01-11 20:47:14">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">07. 氯气的味道“你喜欢吗？” 一个高大、肤色黝黑的男人笑着问道——他是我现在参演的电视剧的制片人。 “很漂亮。”我回答。 我环顾着这间奢华的公寓套房。落地玻璃墙展现出窗外壮丽的河景，阳光透进来，让整个空间明亮又通透。另一侧还能看到城市景色。 一切——设计、用材、格局——都刚刚好。我真的很喜欢。 “我完全支持你买这个，Jay。风景好、房间好，是边角套间，这层楼一共才八户。非常私密——就像你要的那样。” 我保持着中立的表情。 “我还得再考虑一下，Khun Phong。后面交给 Je-Ang 来处理吧。” Je-Ang 现在已经不只是我的经纪人——他几乎成了我的全部。以前并不是这样，但自从我和 Prannapat 分手之后，我慢慢变了。 我猜，我那时候大概糟糕到 Angsumalin 开始把我当公主一样照顾。 “没关系。如果你觉得找 Mr. O 更方便，也可以。说实话，要不是他开口，我根本不会卖这间房给别人。” 这套新公寓是我请 Je-Ang 帮忙找的。房主原来是 P’O 的朋友。我不知道 Je-Ang 是怎么去谈、怎么说动 P’O 的，但我们现在确实能来看房了——虽然房主一开始就...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-06/" title="Hello! How are you?_06">Hello! How are you?_06</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:47:08.000Z" title="发表于 2026-01-11 20:47:08">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">06. Bitch, Jennie’s Solo“你还没和 Ploy 复合？” “这和你无关。” “谁不想有第二次机会呢。” 车里的冷气声在沉默中响着。只有我们两个在交谈。 “你不知道全部的事，就别随便评论。” “我只是知道——别人的错总是看起来比自己的严重。等我们意识到……人已经没了。” “没错。等你明白的时候，他们早就走了。” 短暂的沉默之后，我开口： “有些人其实一直在远处看着。也许他们其实从未真正离开。” “那也许是离得太远了，远到被看的人根本不知道他们还在乎。” 那是怒意？还是痛意？ “他们在乎。但如果那个他们在乎的人，正在和自己亲哥哥谈恋爱——那可能就没办法表现出来。” 她苦笑了一下。 “有些人明明有一大把时间，却偏偏选择逃走、消失。然后等人家开始和别人交往了，又回来闹一出。” “她们才在一起两个星期，她就和我哥在一起了。我不觉得那是很久……那你会怎么做？” “如果是我，我不会去劈腿。我会去找她、打电话、解释清楚。” “那是谁说‘别打电话给我’的？是谁？” 我提高了声音。 “别人说‘别打电话’的时候，多半就是想让你打电话。一直打，直到她接为止。要让她知道你在乎。要证明...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-05/" title="Hello! How are you?_05">Hello! How are you?_05</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:47:03.000Z" title="发表于 2026-01-11 20:47:03">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">05. 电话线那一夜之后，我们搬到了城市里。但仅仅因为我和 Prang 抱着睡了一晚，并不代表我们就此和好了。我的身体虽然在恢复，但脾气却比以前还要暴躁。 我一个人坐在车里，暖气开得足足的，等着上场拍戏。我不知道是天气太冷还是怎么了，但我明显能感觉到，那两个女人之间的亲密程度越来越高了。 有时候我会看到 P’Ploy 走过去搂住 Prang 的肩，而 Prang 也会依偎过去。她们彼此的眼神、举止间的关怀——如果我心无杂念，也许会觉得这只是两个亲密的女孩朋友在打闹取暖。 可惜，我的心可没那么干净。我那“雷达”疯狂报警——这哪是普通朋友！   “砰！！！” 我猛地朝窗外看去，吓得一激灵，差点跳起来。一声尖叫从我喉咙里窜出来，我死死按住胸口。 天哪！这女孩是不是 Kade 特意安排来吓我的？她站在车窗外，一动不动，就像《孤儿怨》里那个笑容阴森的小女孩 Esther，眼神直勾勾地盯着我看，脖子后面顿时起了一身鸡皮疙瘩。 又来！ 她又敲了一次窗户，看我还坐着一动不动、一个劲地眨眼，就是不肯摇下车窗。 我打死也不想开。 我一边坐直了身体，一边偷偷检查 Ged 手里有没有什么锤子或电锯。 “...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-04/" title="Hello! How are you?_04">Hello! How are you?_04</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:46:58.000Z" title="发表于 2026-01-11 20:46:58">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">04. 一座老房子与两条毯子这到底该叫什么？ 我和 P’Ploy 之间的这种关系。 如果要像明星那样回答，我大概会说我们“感情很好，就像姐妹一样”。 但如果要说实话…… “Jay……我发誓那辆车我认得。” 一辆洁白如新、宛如天上掉下来的宾利 Continental GT Speed Coupe 缓缓驶入停车场。21 英寸的轮毂配着 Pirelli PZero 轮胎，平稳地停了下来。就在 4.0L 双涡轮增压引擎归于寂静之际，驾驶座的门也轻轻打开。 “靠，不是觉得眼熟……那根本就是他！” 一个皮肤白皙、打扮干净利落的男人下了车，黑衬衫的袖子整齐地卷至手肘，长腿配着利落的棕色西裤，一步步稳健地朝我们走来。 “他怎么知道我今天在这拍戏？” 我低声嘀咕，偷偷瞥了一眼身边的人——她一手捂着胸口，两眼闪闪发光。 “我看起来还好吗？妆花了吗？” 我那光彩夺目的经纪人，一位不折不扣的骄傲女王，此刻用手拨了拨造型完美的头发，目不转睛地盯着那名男子。他的五官和我有着惊人的相似。 “Jay——” “是 Jin 打电话问的，我就告诉他了。就算我不说，他迟早也会找到你。又不是什么国家机密。” “你忘了我今...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-03/" title="Hello! How are you?_03">Hello! How are you?_03</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:46:54.000Z" title="发表于 2026-01-11 20:46:54">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">03. 炽热的内焰大概是晚上八点左右，Ken扶着看似醉醺醺、神情迷离的我进了他的公寓。四周墙壁刷得洁白明亮，一侧挂着一幅大画。房间整洁有序，处处透着精心布置的痕迹。 我无力地靠在他那结实的胸膛上——那是他靠着无数时间、汗水，还有大量蛋白粉打造出来的。 Ken把我温柔地放到床上，而我却死死抱着他，怎么都不肯松手。 “我好寂寞……陪我一下，好不好？” 我用带着糖意的眼神望着他，眼中满是渴望。Ken试着温柔地掰开我缠着他的手臂，但没成功。他一松开，我又缠了上去。结果我们俩扭打成一团，像在玩一场不太正经的角力游戏。 “我们两个单独在这里不太好，放开我。” “才不要，”  我赖着不放，还往他怀里蹭，手一路滑过他的脖子和胸膛。但Ken还是不断想把我推开。于是我轻轻一推，把他压倒在铺着浅色床单的厚实床垫上。 “我就坐你旁边，陪你睡着，好不好？但你得先放开。” Ken终于挣脱出来坐起身。而我，还装作醉意未醒的样子，紧跟其后——一条腿跨过去，整个人都压在他身上。 我双手按住他，又一次把他压倒，脸凑得极近。他身体的热度、混合着古龙水和气息的气味包围着我…… 我再也控制不住了。 “哈……哈啾！” “咔...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-02/" title="Hello! How are you?_02">Hello! How are you?_02</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T12:46:31.000Z" title="发表于 2026-01-11 20:46:31">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">02. 脆皮猪肉“Je-Ang，你能帮我找间新公寓吗？” 我躺在宽大的 SUV 里，将座椅放倒几乎呈平躺，闭上眼，打算在去片场的路上小睡一会。 “又要搬？” “嗯。旧的就出租出去。” 光是听他的声音，我就能想象出 Je-Ang 正在无奈地摇头。 “我真搞不懂你。” “我哥已经知道我住哪了。” “所以你打算每次你哥找到你住处就搬家？” “他太常过来了，我根本得不到清静。” “天啊，你们两个真让我发疯。哥哥太过护妹，妹妹却一直逃跑。你都搬了多少次了？我都快记不清了。” “Je-Ang，我只需要你帮我找房。别说了，我要睡觉。” 我打断了他。但他当然还没说完。 “我有个主意……干脆搬来我家吧？等亲爱的 Jin 上门时，由我，Angsumalin，亲自伺候他。” 他咧嘴一笑，语气暧昧得令人发毛。 “我会把他当皇帝一样宠着——他压根没空来烦你。怎么样？” “我还是爱我哥的。” “Jay！” 他尖着嗓子哼唧了一声，夸张得让我真想一巴掌拍过去。2013年电影版的 Angsumalin 才不会这么做作。 “Je，拜托你，这次住址保密。” 终于，我得以闭上眼，安然入睡。 对我来说，Je-Ang 是朋...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-00/" title="Hello! How are you?_00">Hello! How are you?_00</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T09:46:43.000Z" title="发表于 2026-01-11 17:46:43">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">作者：SIIX 发行日期：2019 年 3 月 19 日 英文译者：Sun Yan  本文中文译本系依据 Sun Yan 老师的英文译本翻译而成。鉴于译者本人不具备泰语语言能力，未能直接参考原泰文文本，特此说明。  序章“你怎么看现在粉丝疯狂‘磕你们俩 CP’这件事？” “我现在又被跟谁凑对了？”我假装不明白地反问，虽然内心早已对这种问题感到厌倦。这类提问，总是阴魂不散。 “还是同一个人——Ken Achira，你最新剧里的搭档。” 一个小小的笑容，几秒钟的羞涩移开目光，就足够勾起大家无尽的想象。 “我们只是关系亲近的朋友。”我重复着那句熟烂于心的标准回答。 “那你怎么看大家希望你和 Ken 假戏真做？” 颁奖典礼现场喧闹嘈杂，音乐轰鸣，我不得不凑近些，才能听清对方在问什么。 “我很高兴观众能投入到剧情中。” “Ken 是你喜欢的类型吗？” 我顿了一下，脸上的笑容微微淡了。 “他本来就已经很有魅力了，不是吗？” “那如果他追你呢？你会怎么回应？” “那你得先问问他——他是不是打算追我。” 周围是演员们接受采访的场景，人群中人来人往。 “但有人看见你们两个一起吃晚饭。” “有照片吗...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/11/Hello-How-are-you-01/" title="Hello! How are you?_01">Hello! How are you?_01</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-11T09:46:43.000Z" title="发表于 2026-01-11 17:46:43">2026-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/">小说翻译</a></span></div><div class="content">01. 你有钱交违约金吗？“试装？” “对，试装，下周。” “我不去。请帮我退出这个项目。我不演了。我现在的行程已经排得满满的，几乎一点休息时间都没有。” “又来了。” Je-Ang 拉长语调地说。 “你不是总喊没时间休息吗？可你不睡觉的时候都在干嘛？” 这个身材高挑、打扮浮夸的男同志，用他修得完美无瑕的指甲轻轻点了点我的手机，一脸不耐。 “你躺在这儿玩手机是几个意思？” “这就是我休息的一种方式啊。” 我一边把手机从他指尖护开，一边漫不经心地说。 “Jay。” 他的语气忽然沉下来，带上了难得的认真。 “你不能把这当儿戏。你已经签了合同。上面的人，整个制作组，大家都准备好了。” 他说着，把一份薄薄的 A4 剧本直接拍在我身上。我还躺在沙发上，手机还没放下。 “这是第一场的剧本。读一读。” 我微微一侧身，任那张纸滑落在地，眼睛连动都没动一下，依然盯着屏幕。 “我每天排得满满的，哪来的时间看这个？” “我已经帮你排好时间了。” Je-Ang——也就是全名 Angsumalin，那是他出道后给自己取的艺名。他的本名，据说是个宇宙机密，连他妈都不能随便说出口。 “你以为我是机器人吗？我也...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/shepherd.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Shepherd</div><div class="author-info-description">生活不可能像你想象的那么好，但也不会像你想象的那么遭</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to my blog!</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/16/Hello-How-are-you-SPECIAL-02/" title="Hello! How are you?_SPECIAL_02">Hello! How are you?_SPECIAL_02</a><time datetime="2026-01-16T12:38:14.000Z" title="发表于 2026-01-16 20:38:14">2026-01-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/16/Hello-How-are-you-SPECIAL-01/" title="Hello! How are you?_SPECIAL_01">Hello! How are you?_SPECIAL_01</a><time datetime="2026-01-16T12:38:09.000Z" title="发表于 2026-01-16 20:38:09">2026-01-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/16/Hello-How-are-you-EPILOGUE/" title="Hello! How are you?_EPILOGUE">Hello! How are you?_EPILOGUE</a><time datetime="2026-01-16T12:37:52.000Z" title="发表于 2026-01-16 20:37:52">2026-01-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/16/Hello-How-are-you-23/" title="Hello! How are you?_23">Hello! How are you?_23</a><time datetime="2026-01-16T12:37:30.000Z" title="发表于 2026-01-16 20:37:30">2026-01-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/16/Hello-How-are-you-22/" title="Hello! How are you?_22">Hello! How are you?_22</a><time datetime="2026-01-16T12:37:15.000Z" title="发表于 2026-01-16 20:37:15">2026-01-16</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4%E7%BF%BB%E8%AF%91/"><span class="card-category-list-name">小说翻译</span><span class="card-category-list-count">27</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A5%9E%E7%A7%98%E5%B0%8F%E5%B1%8B%E6%9D%82%E8%B0%88/"><span class="card-category-list-name">神秘小屋杂谈</span><span class="card-category-list-count">3</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/" style="font-size: 1.1em; color: #999">技术相关</a> <a href="/tags/Hello-How-are-you/" style="font-size: 1.5em; color: #99a9bf">Hello! How are you?</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">31</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">31</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">118.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-16T12:46:56.036Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/index.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Shepherd</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4-b1"></script><script src="/js/main.js?v=5.5.4-b1"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["珍惜眼前人","人最宝贵的是生命，生命对人只有一次，人的一生应当这样度过：当他回首往事时，不因虚度年华而悔恨，也不因碌碌无为而羞愧"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["珍惜眼前人","人最宝贵的是生命，生命对人只有一次，人的一生应当这样度过：当他回首往事时，不因虚度年华而悔恨，也不因碌碌无为而羞愧"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4-b1"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_categories_card_injector_config(){
+    // 检查容器是否存在
+    var parent_div_git = document.getElementById('recent-posts');
+    // 如果容器不存在，则动态创建
+    if (!parent_div_git) {
+      console.warn('butterfly_categories_card: 挂载容器不存在，正在动态创建...');
+      // 创建新容器（默认插入到页面主体顶部）
+      parent_div_git = document.createElement('div');
+      parent_div_git.id = 'recent-posts'; // 赋予配置的ID
+      document.querySelector('#page').prepend(parent_div_git); // 插入到 #content-inner 内
+    }
+    var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 950px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 800px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/img/book.jpg);"> <a class="categoryBar-list-link" href="/categories/小说翻译/">小说翻译</a><span class="categoryBar-list-count">27</span><span class="categoryBar-list-descr">小说翻译</span></li><li class="categoryBar-list-item" style="background:url(/img/12.png);"> <a class="categoryBar-list-link" href="/categories/神秘小屋杂谈/">神秘小屋杂谈</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">2</span></li></ul></div></div>';
+    console.log('已挂载 butterfly_categories_card');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+  }
+  // 路径匹配逻辑（使用 startsWith）
+  if (location.pathname.startsWith('/categories/') || '/categories/' === 'all') {
+    butterfly_categories_card_injector_config();
+  }
+  </script><!-- hexo injector body_end end --></body></html>
